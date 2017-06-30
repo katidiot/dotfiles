@@ -1,0 +1,6 @@
+#include ".config/.Xresources.d/colors"
+#include ".config/.Xresources.d/fonts"
+#include ".config/.Xresources.d/xft"
+#include ".config/.Xresources.d/cursor"
+#include ".config/.Xresources.d/rxvt"
+

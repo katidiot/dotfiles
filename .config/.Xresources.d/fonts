@@ -1,0 +1,12 @@
+!URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+!URxvt.font: xft:Bitstream Vera Sans Mono:autohint=true:pixelsize=10
+!URxvt.font: xft:DejaVu Sans Mono:antialias=true:pixelsize=12
+!URxvt.font: xft:Terminus:10
+!URxvt.font: -misc-dejavu sans mono-medium-r-normal-*-11-*-96-96-*-*-iso8859-*
+!URxvt.font: xft:Noto Mono for Powerline:pixelsize=13:antialias=true:hinting=true
+!URxvt.boldFont: xft:Noto Mono for Powerline:bold:pixelsize=13:antialias=true:hinting=true
+!URxvt.font: xft:Literation Mono Powerline Nerd Font Complete Mono:pixelsize=13:antialias=true:hinting=true
+!URxvt.boldFont: xft:Literation Mono Powerline Nerd Font Complete:bold:pixelsize=13:antialias=true:hinting=true
+URxvt.font: xft:DroidSansMonoForPowerline Nerd Font:pixelsize=13:antialias=true:hinting=true
+URxvt.boldFont: xft:DroidSansMonoForPowerline Nerd Font:bold:pixelsize=13:antialias=true:hinting=true
+

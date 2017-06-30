@@ -1,0 +1,36 @@
+[user]
+	email = apostolos.katidiotis@upstreamsystems.com
+	name = Apostolos Katidiotis
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[credential]
+	helper = cache
+[push]
+	default = simple
+[alias]
+    co = commit --verbose
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    s = status
+    b = branch -vvv -a
+    p = pull -ff
+    pl = pull --rebase
+    df = diff
+    dc = diff --cached
+	dh = diff HEAD
+	ch = checkout
+    hub = !git daemon --base-path=. --export-all --enable=receive-pack --reuseaddr --informative-errors --verbose
+    serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
+	check-whitespace = !git diff-tree --check $(git hash-object -t tree /dev/null) HEAD
+	g = grep --break --heading --line-number
+#[merge]
+#    ff = false
+[rerere]
+	enabled = true
+[core]
+	excludesfile = ~/.gitignore
+[grep]
+	extendRegexp = true
+	lineNumber = true

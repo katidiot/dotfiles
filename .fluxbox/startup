@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Change your keymap:
+#xmodmap "/home/asid/.Xmodmap"
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+###xrandr --output VGA1 --mode 1280x1024 --rate 75.0 &
+##xrandr --output VGA1 --mode 1440x900 --rate 75.0 &
+
+#xrandr --output eDP1 --off &
+unclutter -idle 3 &
+#gnome-power-manager &
+###wmweather -s LGAV &
+#wmsmixer -w &
+###wmCalClock &
+###wmnd &
+parcellite &
+###nm-applet &
+#gnome-sound-applet &
+###xfce4-power-manager &
+#krandrtray &
+#dropbox start &
+###sleep 2s && conky &
+#wmcliphist &
+#xcompmgr -cCfF -r7 -o.65 -l-10 -t-8 -D7 &
+#xcompmgr -fF -I-.002 -O-.003 -D6 -cC -t-5 -l-6 -r5 &
+#/usr/bin/beagled &
+# autolocks X screen  after 15 minutes of inactivity
+#xautolock –time 15  –locker "xlock" –secure &
+pnmixer &
+#batti &
+#nm-applet &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+exec fluxbox
+# or if you want to keep a log:
+# exec fluxbox -log "/home/asid/.fluxbox/log"

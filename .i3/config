@@ -36,9 +36,9 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec konsole
+bindsym $mod+Return exec konsole
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+#bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+quotedbl kill

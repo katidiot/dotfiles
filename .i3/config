@@ -50,6 +50,9 @@ bindsym $mod+Shift+quotedbl kill
 # installed.
 #bindsym $mod+e exec --no-startup-id i3-dmenu-desktop
 
+# Remove the Title bar from all Windows
+new_window pixel 1px
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -197,6 +200,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
 	#status_command i3status
 	status_command i3blocks -c ~/.i3/i3blocks.conf
+	#mode hide
+    #hidden_state hide
+    #modifier Mod1
 
 		colors {
 			background $bg-color
@@ -220,7 +226,7 @@ bindsym Control+$mod+3 exec --no-startup-id xrandr --output eDP-1 --auto --outpu
 #bindsym Control+$mod+1 exec --no-startup-id xrandr --output eDP1 --off && xrandr --output DP1-1 --auto
 #bindsym Control+$mod+2 exec --no-startup-id xrandr --output DP1-1 --off && xrandr --output eDP1 --auto
 #bindsym Control+$mod+3 exec --no-startup-id xrandr --output eDP1 --auto && xrandr --output DP1-1 --auto --right-of eDP1
-exec --no-startup-id xrandr --output DP-1-1 --auto && xrandr --output eDP-1 --off
+exec --no-startup-id xrandr --output eDP-1 --auto --output DP-1-1 --auto --right-of eDP-1
 #exec --no-startup-id xrandr --output DP1-1 --auto --right-of eDP1
 #workspace 5 output eDP1
 
@@ -240,7 +246,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Stuff
-bindsym $mod+e exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Noto San 18"
+bindsym $mod+e exec rofi -run-list-command ". ~/usr/bin/zsh_aliases_functions.sh" -run-command "/bin/zsh -i -c '{cmd}'" -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Noto San 18"
+#bindsym $mod+e exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Noto San 18"
 bindsym $mod+t exec thunar
 bindsym Print exec spectacle
 
@@ -260,6 +267,6 @@ exec --no-startup-id skypeforlinux
 #exec --no-startup-id xautolock –time 15  –locker "xlock"
 exec --no-startup-id xautolock
 exec --no-startup-id unclutter -idle 3 &
-exec --no-startup-id compton -f
+exec --no-startup-id compton -f --inactive-dim 0.2
 exec --no-startup-id spotify
 exec --no-startup-id urxvtd --quiet --opendisplay --fork

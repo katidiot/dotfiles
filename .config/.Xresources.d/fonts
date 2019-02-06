@@ -9,4 +9,9 @@
 !URxvt.boldFont: xft:Literation Mono Powerline Nerd Font Complete:bold:pixelsize=13:antialias=true:hinting=true
 URxvt.font: xft:DroidSansMonoForPowerline Nerd Font:pixelsize=13:antialias=true:hinting=true
 URxvt.boldFont: xft:DroidSansMonoForPowerline Nerd Font:bold:pixelsize=13:antialias=true:hinting=true
+!URxvt.font: xft:DroidSansMonoForPowerline NF:style=Book:size=10:antialias=true:hinting=true
+!URxvt.boldFont: xft:DroidSansMonoForPowerline NF:bold:style=Book:size=10:antialias=true:hinting=true
+!URxvt.font: xft:DroidSansMonoForPowerline NF:style=Book:size=10:antialias=true:hinting=true
+!URxvt.boldFont: xft:DroidSansMonoForPowerline NF:bold:style=Book:size=10:antialias=true:hinting=true
+!URxvt.font: xft:DroidSansMonoForPowerline Nerd Font:pixelsize=12:antialias=true:hinting=true
 

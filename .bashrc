@@ -16,6 +16,15 @@ fi
 
 
 # Put your fun stuff here.
+#export PS1="\[\e[31m\]\u\[\e[33m\]@\[\e[36m\]\H \[\e[33m\]\w \[\e[34m\]$ \[\e[0m\]"
+
+#export SMARTGITHG_JAVA_HOME=/etc/java-config-2/current-system-vm
+
+#export JAVA_HOME=/etc/java-config-2/current-system-vm
+
+#source /etc/profile.d/bash-completion.sh
+#source /usr/share/git/git-prompt.sh
+#export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export PS1='\[\e[31m\]\u\[\e[33m\]@\[\e[36m\]\H \[\e[33m\]\w$(__git_ps1 " (%s)") \[\e[34m\$ \[\e[0m\]'
 
 alias ll='ls -l'
@@ -56,3 +65,5 @@ fi
 # Configure QT5 to work correctly on other DEs
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

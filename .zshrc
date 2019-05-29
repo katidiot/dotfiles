@@ -32,7 +32,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -54,7 +54,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast common-aliases dirhistory docker history jsontools)
+plugins=(git gitfast common-aliases dirhistory docker history jsontools kubectl helm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,8 +62,9 @@ source $ZSH/oh-my-zsh.sh
 alias v='vim'
 alias s='ssh'
 alias gg='cd /home/asid/Data/Projects/upstream/'
+alias firefox='GTK_THEME=Adwaita:light firefox'
 alias -s go=vim
-alias -s py=vim
+#alias -s py=vim
 alias -s txt=vim
 alias -g psa='ps aux | grep'
 
@@ -74,3 +75,11 @@ eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
 source ~/.plevel9k.sh
 #bindkey -v
+# Use ctrl+w to delete Word and alt+bkspc to delete word (like Vim)
+
+# Use custom keybindings
+bindkey -s '^s' 's sysuser@'
+bindkey -s '^t' 'mdvmsrv'
+bindkey -s '^n' 'lhvmsrv'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -10,7 +10,7 @@ export ZSH=/home/asid/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -67,6 +67,7 @@ alias -s go=vim
 #alias -s py=vim
 alias -s txt=vim
 alias -g psa='ps aux | grep'
+alias cat='bat --theme="Monokai Extended Bright"'
 
 eval `keychain --eval --agents ssh -Q --quiet id_rsa`
 
@@ -82,4 +83,7 @@ bindkey -s '^s' 's sysuser@'
 bindkey -s '^t' 'mdvmsrv'
 bindkey -s '^n' 'lhvmsrv'
 
+# FZF configuration
+export FZF_DEFAULT_OPTS='--border --info=inline'
+export FZF_COMPLETION_TRIGGER='``'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
